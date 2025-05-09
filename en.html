@@ -1,101 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WARZONE LOADOUTS STREAM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #0d0d0d;
-      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e1318;
+      color: #ffffff;
       text-align: center;
+      padding: 20px;
     }
 
     h1 {
       font-size: 2.5rem;
-      margin-top: 40px;
-      color: #33ff00;
-      text-shadow: 1px 1px 5px #000;
+      font-weight: bold;
+      margin-top: 20px;
     }
 
     h2 {
-      color: #ffffff;
-      margin-bottom: 40px;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      font-weight: normal;
+      color: #ccc;
     }
 
-    p {
+    .description {
       max-width: 800px;
-      margin: 10px auto;
+      margin: 20px auto;
+      font-size: 1.1rem;
       line-height: 1.6;
-    }
-
-    .commands {
-      background-color: #1a1a1a;
-      border-radius: 10px;
+      background-color: #1a1f25;
       padding: 20px;
-      margin: 40px auto;
-      width: 80%;
-      font-family: monospace;
-      color: #a0ffa0;
+      border-radius: 10px;
+      text-align: left;
     }
 
-    .btn-invite {
-      display: inline-block;
-      background-color: #33ff00;
-      color: #000;
-      font-weight: bold;
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin-top: 30px;
-      box-shadow: 0 0 10px #33ff00;
-      transition: background-color 0.3s;
+    .description b {
+      color: #ffffff;
     }
 
-    .btn-invite:hover {
-      background-color: #28cc00;
-    }
-
-    .bot-images {
+    .bot-examples {
       margin: 30px 0;
     }
 
-    .bot-images img {
-      width: 200px;
+    .bot-examples img {
+      height: 60px;
       margin: 10px;
+      border-radius: 8px;
+      border: 2px solid #444;
+    }
+
+    .invite-btn {
+      background-color: #5865F2;
+      color: white;
+      padding: 14px 26px;
+      border: none;
       border-radius: 10px;
-      border: 2px solid #33ff00;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .invite-btn:hover {
+      background-color: #4752c4;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .language-switch a {
+      color: #aaa;
+      background-color: #222;
+      padding: 6px 12px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .language-switch a:hover {
+      background-color: #333;
+    }
+
+    .commands {
+      background-color: #1a1f25;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: monospace;
+      font-size: 0.95rem;
+      white-space: pre-line;
     }
   </style>
 </head>
 <body>
+
+  <div class="language-switch">
+    <a href="index.html">ES</a>
+    <a href="en.html">EN</a>
+  </div>
+
   <h1>WARZONE LOADOUTS STREAM</h1>
   <h2>New Discord BOT for Warzone Streamers!</h2>
 
-  <p>Would you like to bring more utility and engagement to your Discord server?</p>
-  <p><strong>Introducing WZL</strong>, a bot created especially for Call of Duty: Warzone streamers, with a simple and powerful function:</p>
-  <p>Share your loadouts with your community quickly and in an organized way. Your followers can easily view and copy your favorite classes directly from Discord.</p>
-  <p>Whether you're looking to make your server more interactive or just want to share your setups more easily, <strong>WZL is the perfect tool for you.</strong></p>
+  <div class="description">
+    <p><b>Would you like to bring more utility and engagement to your Discord server?</b></p>
+    <p><b>Introducing WZL</b>, a bot created especially for <b>Call of Duty: Warzone</b> streamers, with a simple and powerful function:</p>
+    <ul>
+      <li>🛠️ Share your loadouts with your community quickly and in an organized way.</li>
+      <li>🎮 Your followers can easily view and copy your favorite classes directly from Discord.</li>
+    </ul>
+    <p>Whether you're looking to make your server more interactive or just want to share your setups more easily, <b>WZL is the perfect tool for you.</b></p>
+  </div>
 
-  <h3>Bot Examples:</h3>
-  <div class="bot-images">
+  <div class="bot-examples">
+    <h3>Bot Examples:</h3>
     <img src="Ejemplo%201.PNG" alt="Example 1">
     <img src="Ejemplo%202.PNG" alt="Example 2">
   </div>
 
-  <h3>Available Commands:</h3>
+  <button class="invite-btn" onclick="window.open('https://discord.com/oauth2/authorize?client_id=1366171777159401482&permissions=8&integration_type=0&scope=bot+applications.commands')">
+    Invite the Bot Now
+  </button>
+
   <div class="commands">
-    /add_load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add a new loadout<br>
-    /del_load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Delete a loadout<br>
-    /edit_load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Edit a loadout (use "Optic: NO" to remove the sight)<br>
-    /loadouts &nbsp;&nbsp;&nbsp;&nbsp; Show available loadouts
+    /add_load  Add a new loadout  
+    /del_load  Delete a loadout  
+    /edit_load  Edit a loadout (use "Optic: NO" to remove the sight)  
+    /loadouts  Show available loadouts  
+	/setbot  Selects a channel so that only the bot commands work there. If not used, it will work on all channels.
+	/unsetbot  Removes the channel selection to return to work on all channels
   </div>
 
-  <a href="https://discord.com/oauth2/authorize?client_id=1366171777159401482&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn-invite" target="_blank">
-    Invite the Bot Now!
-  </a>
 </body>
 </html>

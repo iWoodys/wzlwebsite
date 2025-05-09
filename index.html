@@ -1,111 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WARZONE LOADOUTS STREAM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #0d0d0d;
-      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e1318;
+      color: #ffffff;
       text-align: center;
-      background-image: url('images/warzone_background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      padding: 20px;
     }
 
     h1 {
       font-size: 2.5rem;
-      margin-top: 40px;
-      color: #33ff00;
-      text-shadow: 1px 1px 5px #000;
+      font-weight: bold;
+      margin-top: 20px;
     }
 
     h2 {
-      color: #ffffff;
-      margin-bottom: 40px;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      font-weight: normal;
+      color: #ccc;
     }
 
-    p {
+    .description {
       max-width: 800px;
-      margin: 10px auto;
+      margin: 20px auto;
+      font-size: 1.1rem;
       line-height: 1.6;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      border-radius: 10px;
-    }
-
-    .commands {
-      background-color: rgba(26, 26, 26, 0.8);
-      border-radius: 10px;
+      background-color: #1a1f25;
       padding: 20px;
-      margin: 40px auto;
-      width: 80%;
-      font-family: monospace;
-      color: #a0ffa0;
+      border-radius: 10px;
+      text-align: left;
     }
 
-    .btn-invite {
-      display: inline-block;
-      background-color: #33ff00;
-      color: #000;
-      font-weight: bold;
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin-top: 30px;
-      box-shadow: 0 0 10px #33ff00;
-      transition: background-color 0.3s;
+    .description b {
+      color: #ffffff;
     }
 
-    .btn-invite:hover {
-      background-color: #28cc00;
-    }
-
-    .bot-images {
+    .bot-examples {
       margin: 30px 0;
     }
 
-    .bot-images img {
-      width: 200px;
+    .bot-examples img {
+      height: 60px;
       margin: 10px;
+      border-radius: 8px;
+      border: 2px solid #444;
+    }
+
+    .invite-btn {
+      background-color: #5865F2;
+      color: white;
+      padding: 14px 26px;
+      border: none;
       border-radius: 10px;
-      border: 2px solid #33ff00;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .invite-btn:hover {
+      background-color: #4752c4;
+    }
+
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .language-switch a {
+      color: #aaa;
+      background-color: #222;
+      padding: 6px 12px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .language-switch a:hover {
+      background-color: #333;
+    }
+
+    .commands {
+      background-color: #1a1f25;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: monospace;
+      font-size: 0.95rem;
+      white-space: pre-line;
     }
   </style>
 </head>
 <body>
+
+  <div class="language-switch">
+    <a href="index.html">ES</a>
+    <a href="en.html">EN</a>
+  </div>
+
   <h1>WARZONE LOADOUTS STREAM</h1>
-  <h2>¡Nuevo BOT de Discord para Streamers de Warzone!</h2>
+  <h2>Nuevo BOT de Discord para Streamers de Warzone</h2>
 
-  <p>¿Te gustaría darle más utilidad y actividad a tu servidor de Discord?</p>
-  <p><strong>Presentamos WZL</strong>, un bot creado especialmente para streamers de Call of Duty: Warzone, con una función simple y poderosa:</p>
-  <p>Permite compartir tus clases (Loadouts) con tu comunidad de forma rápida y organizada. Con WZL podrán ver y copiar tus clases favoritas de forma directa desde tu Discord.</p>
-  <p>Ya sea que quieras hacer más interactivo tu servidor o simplemente facilitar el acceso a tus configuraciones, <strong>WZL es la herramienta ideal para ti.</strong></p>
-
-  <h3>Ejemplos del funcionamiento del bot:</h3>
-  <div class="bot-images">
-    <img src="images/ejemplo1.png" alt="Ejemplo 1">
-    <img src="images/ejemplo2.png" alt="Ejemplo 2">
+  <div class="description">
+    <p><b>¿Te gustaría darle más utilidad y actividad a tu servidor de Discord?</b></p>
+    <p><b>Te presento WZL</b>, un bot creado especialmente para streamers de <b>Call of Duty: Warzone</b>, con una función simple pero poderosa:</p>
+    <ul>
+      <li>🛠️ Permite compartir tus clases (loadouts) con tu comunidad de forma rápida y organizada.</li>
+      <li>🎮 Tus espectadores podrán ver y copiar tus clases favoritas directamente desde Discord.</li>
+    </ul>
+    <p>Ya sea que quieras hacer más <b>interactivo</b> tu servidor o facilitar el acceso a tus configuraciones, <b>WZL es la herramienta ideal.</b></p>
   </div>
 
-  <h3>Comandos disponibles:</h3>
+  <div class="bot-examples">
+    <h3>Ejemplos del bot:</h3>
+    <img src="Ejemplo%201.PNG" alt="Ejemplo 1">
+    <img src="Ejemplo%202.PNG" alt="Ejemplo 2">
+  </div>
+
+  <button class="invite-btn" onclick="window.open('https://discord.com/oauth2/authorize?client_id=1366171777159401482&permissions=8&integration_type=0&scope=bot+applications.commands')">
+    Invita el Bot ahora mismo
+  </button>
+
   <div class="commands">
-    /add_load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agregás un loadout<br>
-    /del_load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eliminás un loadout<br>
-    /edit_load &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Editás un loadout (usa "Optic: NO" para eliminar la mira)<br>
-    /loadouts &nbsp;&nbsp;&nbsp;&nbsp; Muestra los loadouts disponibles<br>
-    /setbot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Selecciona un canal para que solo los comandos del bot funcionen ahí<br>
-    /unsetbot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elimina la selección del canal para que vuelvan a funcionar en todos los canales<br>
-    /info &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descubre toda la info del bot
+    /add_load  Agregar una clase nueva  
+    /del_load  Eliminar una clase  
+    /edit_load  Editar una clase (usa "Mira: NO" para quitar la mira y la categoria Optic)  
+    /loadouts  Mostrar las clases disponibles
+    /setbot  Selecciona un canal para que solo los comandos del bot funcionen ahí. En caso de no utilizarlo, funcionará en todos los canales
+    /unsetbot   Elimina la selección del canal para que vuelvan a funcionar en todos los canales.	
   </div>
 
-  <a href="https://discord.com/oauth2/authorize?client_id=1366171777159401482&permissions=8&integration_type=0&scope=bot+applications.commands" class="btn-invite" target="_blank">
-    ¡Invita el Bot ahora mismo!
-  </a>
 </body>
 </html>
